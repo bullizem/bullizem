@@ -626,7 +626,101 @@ Dhunë fizike ose shkatërrim i pronës personale.
               
               
               
-              
+             <!-- statistika -->
+
+<section style="background:white;padding:50px;max-width:1000px;margin:50px auto;border-radius:12px;box-shadow:0 6px 15px rgba(0,0,0,0.1);font-family:Arial,sans-serif;">
+
+<h1 style="text-align:center;margin-bottom:30px;">Bullizmi në Shqipëri – Statistika</h1>
+
+<div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-bottom:40px;">
+
+<div style="flex:1 1 200px;background:#f5f5f5;padding:20px;border-radius:10px;text-align:center;">
+<h2 style="margin:0;font-size:35px;">33%</h2>
+<p>Nxënës që kanë përjetuar bullizëm</p>
+</div>
+
+<div style="flex:1 1 200px;background:#f5f5f5;padding:20px;border-radius:10px;text-align:center;">
+<h2 style="margin:0;font-size:35px;">40%</h2>
+<p>Nxënës që kanë parë bullizëm</p>
+</div>
+
+<div style="flex:1 1 200px;background:#f5f5f5;padding:20px;border-radius:10px;text-align:center;">
+<h2 style="margin:0;font-size:35px;">20%</h2>
+<p>Bullizëm në internet</p>
+</div>
+
+<div style="flex:1 1 200px;background:#f5f5f5;padding:20px;border-radius:10px;text-align:center;">
+<h2 style="margin:0;font-size:35px;">5%</h2>
+<p>Nxënës që bullizojnë të tjerët</p>
+</div>
+
+</div>
+
+<div style="max-width:650px;margin:40px auto;">
+<canvas id="chartBullying"></canvas>
+</div>
+
+<div style="margin-top:40px;font-size:17px;line-height:1.7;">
+
+<h2>Ese</h2>
+
+<p>
+Bullizmi është një nga problemet sociale që prek shumë të rinj në shkollat shqiptare. Ai mund të shfaqet në forma të ndryshme, si tallje, ofendime, përjashtim nga grupi apo edhe dhunë fizike. Statistikat tregojnë se një pjesë e konsiderueshme e nxënësve në Shqipëri kanë përjetuar bullizëm ose kanë qenë dëshmitarë të tij. Kjo situatë mund të ndikojë negativisht në vetëbesimin, rezultatet në shkollë dhe shëndetin emocional të fëmijëve dhe adoleshentëve.
+</p>
+
+<p>
+Në vitet e fundit është rritur edhe bullizmi në internet, i njohur si cyberbullying. Përmes rrjeteve sociale dhe platformave online, disa të rinj përballen me komente negative, përhapje thashethemesh ose publikim fotosh pa leje. Kjo tregon se bullizmi nuk ndodh vetëm në ambientin e shkollës, por edhe në hapësirën digjitale. Për këtë arsye është shumë e rëndësishme që shkollat, familjet dhe institucionet të bashkëpunojnë për të rritur ndërgjegjësimin dhe për të krijuar një mjedis më të sigurt dhe më të respektueshëm për të gjithë nxënësit.
+</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+var ctx = document.getElementById("chartBullying");
+
+new Chart(ctx,{
+type:"bar",
+data:{
+labels:[
+"Kanë përjetuar bullizëm",
+"Kanë parë bullizëm",
+"Bullizëm online",
+"Bullizojnë të tjerët"
+],
+datasets:[{
+label:"Përqindja (%)",
+data:[33,40,20,5],
+backgroundColor:[
+"#ff6b6b",
+"#4dabf7",
+"#ffd43b",
+"#63e6be"
+]
+}]
+},
+options:{
+responsive:true,
+plugins:{
+legend:{
+display:false
+}
+},
+scales:{
+y:{
+beginAtZero:true,
+max:50
+}
+}
+}
+});
+
+</script>
+
+</section>
+                    
+                    <!-- statistika -->
               
               
               
@@ -646,7 +740,7 @@ Dhunë fizike ose shkatërrim i pronës personale.
     <footer id="landing-footer" class="clearfix">
         <div class="row clearfix">
 
-            <p id="copyright" class="col-2">Ky projekt u realizua nga Ines Qerimi, Besije Nezha, Rosela Nezha, Todori Kapo dhe Stiven Senka, nxënës së klasës X-II të gjimnazit "18-Tetori"</p>
+            <p id="copyright" class="col-2">Ky projekt u realizua nga Kamila Sulko, Rosela Nezha, Todori Kapo dhe Stiven Senka, nxënës së klasës X-II të gjimnazit "18-Tetori"</p>
 
             <!--Social Icons in Footer-->
             
